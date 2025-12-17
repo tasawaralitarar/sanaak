@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - سنيک گيم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐍 سنيک گيم - Snake Game</h1>
+        
+        <div class="controls-panel">
+            <div class="instructions">
+                <h3>استعمال کی ہدایات (Instructions)</h3>
+                <p>تیر کے بٹنوں سے سانپ کو کنٹرول کریں (↑ ↓ ← →)</p>
+                <p>خوراک کھائیں اور لمبا ہوں!</p>
+                <p>دیوار یا اپنے آپ سے ٹکرانے سے گریز کریں (10 NG کے بعد گیم ختم)</p>
+            </div>
+            
+            <div class="settings">
+                <label for="speed-select">سانپ کی رفتار (Speed):</label>
+                <select id="speed-select">
+                    <option value="slow">آہستہ (Slow)</option>
+                    <option value="normal" selected>نارمل (Normal)</option>
+                    <option value="fast">تیز (Fast)</option>
+                </select>
+            </div>
+            
+            <button id="start-button">▶️ گیم شروع کریں (Start Game)</button>
+        </div>
+
+        <div class="game-info">
+            <p>اسکور (Score): <span id="score">0</span></p>
+            <p>غلط حرکت (NG Count): <span id="ng-count">0 / 10</span></p>
+        </div>
+
+        <div class="game-area">
+            <canvas id="game-canvas" width="400" height="400"></canvas>
+            <div id="game-message" class="hidden">گیم ختم!</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
